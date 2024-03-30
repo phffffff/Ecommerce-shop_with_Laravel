@@ -21,11 +21,7 @@
                             <span class="fas fa-envelope"></span>
                         </div>
                     </div>
-                    @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
+                    @include('Component.notify_input',['var'=>'email'])
                 </div>
                 <div class="input-group mb-3">
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
@@ -35,11 +31,7 @@
                             <span class="fas fa-lock"></span>
                         </div>
                     </div>
-                    @error('password')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
+                    @include('Component.notify_input',['var'=>'password'])
                 </div>
                 <div class="row">
                     <div class="col-8">

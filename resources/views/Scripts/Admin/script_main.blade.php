@@ -32,3 +32,7 @@
 <script src="/template/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/template/dist/js/pages/dashboard.js"></script>
+
+@yield('script')
+
+@yield('script_modal')

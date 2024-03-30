@@ -25,16 +25,22 @@ Route::post('/admin/users/login/store',[UsersController::class,'store']);
 
 Route::middleware(['auth'])->group(function (){
     #admin
-    Route::prefix('admin')->group(function (){
+    Route::prefix('/admin')->group(function (){
         Route::get('/',[MainController::class,'index'])->name('admin');
         Route::get('/main',[MainController::class,'index']);
 
+        #menu
         Route::prefix('menus')->group(function (){
-            Route::get('add',[MenuController::class,'create']);
+            Route::get('/',[MenuController::class,'index'])->name('menus');
+            Route::get('/add',[MenuController::class,'create']);
+            Route::post('/add/store',[MenuController::class,'store']);
+            Route::get('/index',[MenuController::class,'index']);
+            Route::get('/list',[MenuController::class,'index']);
         });
+
     });
 
-    #menu
+
 
 
 });

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name',100);
             $table->integer('parent_id');
             $table->text('description');
-            $table->string('slag',255)->unique();
+            $table->string('slug',255)->unique();
             $table->boolean('active');
             $table->timestamps();
         });

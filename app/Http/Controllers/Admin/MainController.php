@@ -9,6 +9,9 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('Template.Admin.Page.table',['title'=>'Dashboard Admin Ecommerce Shop']);
+        return view('Template.Admin.Page.table',[
+            'title'=>'Dashboard Admin Ecommerce Shop',
+            'name'=>"Sản phẩm",
+        ]);
     }
 }

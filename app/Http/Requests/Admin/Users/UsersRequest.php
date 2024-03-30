@@ -13,6 +13,14 @@ class UsersRequest extends BaseRequest
             'password'=>['required','string'],
         ];
     }
+
+    public function messages():array
+    {
+        return [
+            'email.required'=>'Không được bỏ trống email',
+            'password.required'=>'Không được bỏ trống password',
+        ];
+    }
     /**
      * Determine if the user is authorized to make this request.
      *
